@@ -1,10 +1,9 @@
 [
+  { "page": "3D Model", "url": "model" },
+  { "page": "To-Do List", "url": "todo" },
   { "page": "Image Cropper", "url": "imagecropper" },
   { "page": "Image Recognition", "url": "imagerecognition" },
   { "page": "Drag And Drop", "url": "draganddrop" },
   { "page": "Pagination", "url": "pagination" },
-  { "page": "Gradient Generator", "url": "colorgenerator" },
-  { "page": "To-Do List", "url": "todo" },
-  { "page": "Image Recognition", "url": "imagerecognition" },
-  { "page": "3D Modal", "url": "3dmodal" }
+  { "page": "Gradient Generator", "url": "colorgenerator" }
 ]

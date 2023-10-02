@@ -12,6 +12,7 @@ import ReactCrop, {
   makeAspectCrop,
   PixelCrop,
 } from "react-image-crop";
+import Image from "next/image";
 
 interface Image {
   url: string;
@@ -129,10 +130,12 @@ const ImageCropper: React.FC = () => {
     setShowCrop(false);
     setCompletedCrop(undefined);
   };
+
   const handleRemoveImg = () => {
     const data: any = images[selectedImageIndex].name;
     setImages((preValue) => preValue.filter((img: any) => img.name !== data));
   };
+
   const handleCropImage = () => {
     // setCrop(undefined); // Makes crop preview update between images.
     const reader = new FileReader();
@@ -197,10 +200,14 @@ const ImageCropper: React.FC = () => {
                   )}
                 </div>
                 {showCrop === false ? (
-                  <img
-                    src={images[selectedImageIndex]?.url}
-                    alt={images[selectedImageIndex]?.name}
-                  />
+                  selectedImageIndex !== null && (
+                    <Image
+                      src={images[selectedImageIndex]?.url}
+                      alt={images[selectedImageIndex]?.name}
+                      width={100}
+                      height={100}
+                    />
+                  )
                 ) : (
                   <>
                     {!!imgSrc && (
